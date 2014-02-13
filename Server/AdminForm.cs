@@ -12,9 +12,9 @@ using Common;
 
 namespace Server
 {
-    public partial class MainForm : Form
+    public partial class AdminForm : Form
     {
-        public MainForm()
+        public AdminForm()
         {
             InitializeComponent();
 

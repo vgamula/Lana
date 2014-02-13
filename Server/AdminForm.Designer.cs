@@ -1,6 +1,6 @@
 ﻿namespace Server
 {
-    partial class MainForm
+    partial class AdminForm
     {
         /// <summary>
         /// Требуется переменная конструктора.

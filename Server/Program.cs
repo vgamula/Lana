@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Common;
+
 namespace Server
 {
     static class Program
@@ -24,7 +26,7 @@ namespace Server
             dataDirectory = dataDirectory.Remove(0, 6);
             AppDomain.CurrentDomain.SetData("DataDirectory", dataDirectory);
             
-            Application.Run(new MainForm());
+            Application.Run(new LoginForm(new AdminForm(), null, null));
         }
     }
 }
