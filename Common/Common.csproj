@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddContestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddContestForm.Designer.cs">
+      <DependentUpon>AddContestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contest.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -146,6 +152,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddContestForm.resx">
+      <DependentUpon>AddContestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
