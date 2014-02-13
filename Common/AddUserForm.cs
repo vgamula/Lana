@@ -36,7 +36,7 @@ namespace Common
                 return;
             }
             User tmp = this._user ?? new User();
-            tmp.Access = 1;
+            tmp.Access = this._user != null ? this._user.Access : 1;
             tmp.Username = textBoxUsername.Text;
             tmp.Password = Utils.GetMD5Hash(textBoxPassword.Text);
             tmp.Details = richTextBoxDetails.Text;

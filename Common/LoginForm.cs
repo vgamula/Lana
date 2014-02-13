@@ -21,7 +21,7 @@ namespace Common
             InitializeComponent();
             this._adminForm = adminForm;
             this._competitorForm = competitorForm;
-            this._spectator = _spectator;
+            this._spectator = spectator;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace Common
             using (var db = new DatabaseEntities())
             {
                 String username = textBoxUsername.Text;
-                String password = textBoxPassword.Text;
+                String password = Utils.GetMD5Hash(textBoxPassword.Text);
 
                 String message = String.Empty;
                 Boolean isGood = true;

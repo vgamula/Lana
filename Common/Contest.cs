@@ -28,5 +28,10 @@ namespace Common
     
         public virtual ICollection<Task> Tasks { get; set; }
         public virtual ICollection<UsersContest> UsersContests { get; set; }
+
+        public override string ToString()
+        {
+            return this.Title;
+        }
     }
 }

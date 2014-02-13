@@ -26,8 +26,8 @@ namespace Server
             dataDirectory = dataDirectory.Remove(0, 6);
             AppDomain.CurrentDomain.SetData("DataDirectory", dataDirectory);
             
-            //Application.Run(new LoginForm(new AdminForm(), null, null));
-            Application.Run(new AdminForm());
+            Application.Run(new LoginForm(new AdminForm(), null, null));
+            //Application.Run(new AdminForm());
         }
     }
 }
