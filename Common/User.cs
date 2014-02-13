@@ -17,6 +17,7 @@ namespace Common
         public User()
         {
             this.UsersContests = new HashSet<UsersContest>();
+            this.Results = new HashSet<Result>();
         }
     
         public int Id { get; set; }
@@ -26,5 +27,6 @@ namespace Common
         public string Details { get; set; }
     
         public virtual ICollection<UsersContest> UsersContests { get; set; }
+        public virtual ICollection<Result> Results { get; set; }
     }
 }

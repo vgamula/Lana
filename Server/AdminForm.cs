@@ -23,11 +23,6 @@ namespace Server
             //listBoxContests.DataSource = db.Contests.Local;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -36,7 +31,7 @@ namespace Server
             this.Show();
         }
 
-        private void ShowContests()
+        protected void ShowContests()
         {
             using (var db = new DatabaseEntities())
             {
@@ -83,6 +78,11 @@ namespace Server
                 }
             }
             ShowContests();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new ManageUsersForm()).ShowDialog();
         }
 
         

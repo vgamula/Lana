@@ -4,16 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="25500fefc0104eea93061c007641e249" Name="Diagram1">
-        <EntityTypeShape EntityType="DataContext.Contest" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataContext.Task" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataContext.Test" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataContext.User" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataContext.UsersContest" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="25500fefc0104eea93061c007641e249" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="DataContext.Contest" Width="1.5" PointX="4" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataContext.Task" Width="1.5" PointX="6.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataContext.Test" Width="1.5" PointX="8.125" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataContext.User" Width="1.5" PointX="1.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataContext.UsersContest" Width="1.5" PointX="1.75" PointY="2.375" IsExpanded="true" />
         <AssociationConnector Association="DataContext.FK_Tasks_Contests" ManuallyRouted="false" />
         <AssociationConnector Association="DataContext.FK_UsersContests_Contests" ManuallyRouted="false" />
         <AssociationConnector Association="DataContext.FK_Tests_Tasks" ManuallyRouted="false" />
         <AssociationConnector Association="DataContext.FK_UsersContests_Users" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DataContext.Result" Width="1.5" PointX="4.5" PointY="5.625" />
+        <AssociationConnector Association="DataContext.FK_Results_Tasks" />
+        <AssociationConnector Association="DataContext.FK_Results_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

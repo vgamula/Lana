@@ -50,7 +50,7 @@ namespace Common
             tmp.StartTime = dateTimePickerStart.Value;
             tmp.EndTime = dateTimePickerEnd.Value;
 
-            if (_contest != null)
+            if (this._contest != null)
             {
                 db.Contests.Attach(_contest);
                 db.Entry(_contest).CurrentValues.SetValues(tmp);

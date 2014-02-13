@@ -15,6 +15,16 @@
           <Property Name="StartTime" Type="datetime" Nullable="false" />
           <Property Name="EndTime" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="Results">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="TaskId" Type="int" Nullable="false" />
+          <Property Name="IsPassed" Type="int" Nullable="false" />
+          <Property Name="PassingTime" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="Tasks">
           <Key>
             <PropertyRef Name="Id" />
@@ -23,6 +33,7 @@
           <Property Name="ContestId" Type="int" Nullable="false" />
           <Property Name="Title" Type="varchar" MaxLength="80" Nullable="false" />
           <Property Name="Description" Type="varchar(max)" Nullable="false" />
+          <Property Name="Mark" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Tests">
           <Key>
@@ -51,6 +62,30 @@
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="ContestId" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Results_Tasks">
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="1" />
+          <End Role="Results" Type="Self.Results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tasks">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Results">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Results_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Results" Type="Self.Results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Results">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Tasks_Contests">
           <End Role="Contests" Type="Self.Contests" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -109,10 +144,19 @@
         </Association>
         <EntityContainer Name="Хранилище DataContextContainer">
           <EntitySet Name="Contests" EntityType="Self.Contests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Results" EntityType="Self.Results" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UsersContests" EntityType="Self.UsersContests" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Results_Tasks" Association="Self.FK_Results_Tasks">
+            <End Role="Tasks" EntitySet="Tasks" />
+            <End Role="Results" EntitySet="Results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Results_Users" Association="Self.FK_Results_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Results" EntitySet="Results" />
+          </AssociationSet>
           <AssociationSet Name="FK_Tasks_Contests" Association="Self.FK_Tasks_Contests">
             <End Role="Contests" EntitySet="Contests" />
             <End Role="Tasks" EntitySet="Tasks" />
@@ -156,6 +200,8 @@
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Contest" Relationship="Self.FK_Tasks_Contests" FromRole="Tasks" ToRole="Contests" />
           <NavigationProperty Name="Tests" Relationship="Self.FK_Tests_Tasks" FromRole="Tasks" ToRole="Tests" />
+          <Property Name="Mark" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Results" Relationship="DataContext.FK_Results_Tasks" FromRole="Task" ToRole="Result" />
         </EntityType>
         <EntityType Name="Test">
           <Key>
@@ -177,6 +223,7 @@
           <Property Name="Access" Type="Int32" Nullable="false" />
           <NavigationProperty Name="UsersContests" Relationship="Self.FK_UsersContests_Users" FromRole="Users" ToRole="UsersContests" />
           <Property Name="Details" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Results" Relationship="DataContext.FK_Results_Users" FromRole="User" ToRole="Result" />
         </EntityType>
         <EntityType Name="UsersContest">
           <Key>
@@ -266,7 +313,52 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="UsersContests" EntitySet="UsersContests" />
           </AssociationSet>
+          <EntitySet Name="Results" EntityType="DataContext.Result" />
+          <AssociationSet Name="FK_Results_Tasks" Association="DataContext.FK_Results_Tasks">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Result" EntitySet="Results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Results_Users" Association="DataContext.FK_Results_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Result" EntitySet="Results" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="TaskId" Type="Int32" Nullable="false" />
+          <Property Name="IsPassed" Type="Int32" Nullable="false" />
+          <Property Name="PassingTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Task" Relationship="DataContext.FK_Results_Tasks" FromRole="Result" ToRole="Task" />
+          <NavigationProperty Name="User" Relationship="DataContext.FK_Results_Users" FromRole="Result" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Results_Tasks">
+          <End Type="DataContext.Task" Role="Task" Multiplicity="1" />
+          <End Type="DataContext.Result" Role="Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Results_Users">
+          <End Type="DataContext.User" Role="User" Multiplicity="1" />
+          <End Type="DataContext.Result" Role="Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -287,6 +379,7 @@
           <EntitySetMapping Name="Tasks">
             <EntityTypeMapping TypeName="DataContext.Task">
               <MappingFragment StoreEntitySet="Tasks">
+                <ScalarProperty Name="Mark" ColumnName="Mark" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ContestId" ColumnName="ContestId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -321,6 +414,17 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="ContestId" ColumnName="ContestId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Results">
+            <EntityTypeMapping TypeName="DataContext.Result">
+              <MappingFragment StoreEntitySet="Results">
+                <ScalarProperty Name="PassingTime" ColumnName="PassingTime" />
+                <ScalarProperty Name="IsPassed" ColumnName="IsPassed" />
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

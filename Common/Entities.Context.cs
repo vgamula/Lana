@@ -30,5 +30,6 @@ namespace Common
         public virtual DbSet<Test> Tests { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UsersContest> UsersContests { get; set; }
+        public virtual DbSet<Result> Results { get; set; }
     }
 }
