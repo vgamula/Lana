@@ -29,6 +29,27 @@ namespace Common
             this._contest = contest;
             this.Text = String.Format("{0}: {1}", this.Text, contest.Title);
             ShowTasks();
+            ShowUsers();
+            labelStartTime.Text = this._contest.StartTime.ToString();
+            labelEndTime.Text = this._contest.EndTime.ToString();
+            labelTitle.Text = this._contest.Title;
+        }
+
+        private void ShowUsers()
+        {
+            using (var db = new DatabaseEntities())
+            {
+                listBoxUsersInCompetition.Items.Clear();
+                foreach (var item in db.UsersContests.Where(t=>t.ContestId == this._contest.Id).ToList())
+                {
+                    listBoxUsersInCompetition.Items.Add(item.User);
+                }
+                listBoxUsers.Items.Clear();
+                foreach (var item in db.Users.Where(t=>t.UsersContests.Count==0).ToList())
+                {
+                    listBoxUsers.Items.Add(item);
+                }
+            }
         }
 
         private void ManageContest_Load(object sender, EventArgs e)
@@ -151,6 +172,8 @@ namespace Common
 
         private void listBoxTests_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBoxTests.SelectedItem == null)
+                return;
             Test test = (Test)listBoxTests.SelectedItem;
             richTextBoxInputData.Text = test.InputData;
             richTextBoxOutputData.Text = test.OutputData;
@@ -159,6 +182,39 @@ namespace Common
         private void listBoxTasks_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowTests();
+        }
+
+        private void buttonAddUser_Click(object sender, EventArgs e)
+        {
+            if (listBoxUsers.SelectedItem == null)
+                return;
+            UsersContest uc = new UsersContest();
+            uc.UserId = ((User)listBoxUsers.SelectedItem).Id;
+            uc.ContestId = this._contest.Id;
+            using (var db = new DatabaseEntities())
+            {
+                db.UsersContests.Add(uc);
+                db.SaveChanges();
+            }
+            ShowUsers();
+        }
+
+        private void buttonRemoveUser_Click(object sender, EventArgs e)
+        {
+            if (listBoxUsersInCompetition.SelectedItem == null)
+                return;
+            User user = (User)listBoxUsersInCompetition.SelectedItem;
+            using (var db = new DatabaseEntities())
+            {
+                UsersContest uc = db.UsersContests.FirstOrDefault(t => t.ContestId == this._contest.Id && t.UserId == user.Id);
+                if (uc != null)
+                {
+                    db.UsersContests.Remove(uc);
+                    db.SaveChanges();
+                }
+                
+            }
+            ShowUsers();
         }
 
     }

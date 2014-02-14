@@ -65,10 +65,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddTestForm.cs">
+    <Compile Include="UI\CRUDs\AddTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTestForm.Designer.cs">
+    <Compile Include="UI\CRUDs\AddTestForm.Designer.cs">
       <DependentUpon>AddTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CRUDs\AddTaskForm.cs">
@@ -185,7 +185,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddTestForm.resx">
+    <EmbeddedResource Include="UI\CRUDs\AddTestForm.resx">
       <DependentUpon>AddTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CRUDs\AddTaskForm.resx">
