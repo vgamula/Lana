@@ -14,21 +14,17 @@ namespace Server
 {
     public partial class AdminForm : Form
     {
-        public DatabaseEntities db;
 
         public AdminForm()
         {
             InitializeComponent();
             ShowContests();
-            //listBoxContests.DataSource = db.Contests.Local;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            this.Hide();
             (new AddContestForm()).ShowDialog();
             ShowContests();
-            this.Show();
         }
 
         protected void ShowContests()
@@ -50,10 +46,8 @@ namespace Server
                 MessageBox.Show("You need to select contest!");
                 return;
             }
-            this.Hide();
             (new AddContestForm((Contest)listBoxContests.SelectedItem)).ShowDialog();
             ShowContests();
-            this.Show();
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
@@ -83,6 +77,15 @@ namespace Server
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             (new ManageUsersForm()).ShowDialog();
+        }
+
+        private void listBoxContests_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listBoxContests.SelectedItem == null)
+                return;
+            Contest contest = (Contest)listBoxContests.SelectedItem;
+            (new ManageContest(contest)).ShowDialog();
+
         }
 
         

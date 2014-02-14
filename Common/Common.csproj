@@ -65,16 +65,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddContestForm.cs">
+    <Compile Include="AddTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddContestForm.Designer.cs">
+    <Compile Include="AddTaskForm.Designer.cs">
+      <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageContest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageContest.Designer.cs">
+      <DependentUpon>ManageContest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CRUDs\AddContestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CRUDs\AddContestForm.Designer.cs">
       <DependentUpon>AddContestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddUserForm.cs">
+    <Compile Include="UI\CRUDs\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUserForm.Designer.cs">
+    <Compile Include="UI\CRUDs\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Contest.cs">
@@ -95,16 +107,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="UI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="UI\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageUsersForm.cs">
+    <Compile Include="UI\ManageUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageUsersForm.Designer.cs">
+    <Compile Include="UI\ManageUsersForm.Designer.cs">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,16 +179,22 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddContestForm.resx">
+    <EmbeddedResource Include="AddTaskForm.resx">
+      <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageContest.resx">
+      <DependentUpon>ManageContest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CRUDs\AddContestForm.resx">
       <DependentUpon>AddContestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddUserForm.resx">
+    <EmbeddedResource Include="UI\CRUDs\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="UI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageUsersForm.resx">
+    <EmbeddedResource Include="UI\ManageUsersForm.resx">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

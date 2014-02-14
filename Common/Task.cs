@@ -29,5 +29,10 @@ namespace Common
         public virtual Contest Contest { get; set; }
         public virtual ICollection<Test> Tests { get; set; }
         public virtual ICollection<Result> Results { get; set; }
+
+        public override string ToString()
+        {
+            return this.Title;
+        }
     }
 }

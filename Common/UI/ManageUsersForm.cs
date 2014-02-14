@@ -32,10 +32,8 @@ namespace Common
         
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            this.Hide();
             (new AddUserForm()).ShowDialog();
             ShowUsers();
-            this.Show();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -45,10 +43,8 @@ namespace Common
                 MessageBox.Show("You need to select contest!");
                 return;
             }
-            this.Hide();
             (new AddUserForm((User)listBoxUsers.SelectedItem)).ShowDialog();
             ShowUsers();
-            this.Show();
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)

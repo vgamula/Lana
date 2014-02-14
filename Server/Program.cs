@@ -19,12 +19,6 @@ namespace Server
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            String dataDirectory = Path.GetDirectoryName(Path.GetDirectoryName(
-                            System.IO.Path.GetDirectoryName(
-                            System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)));
-            dataDirectory = dataDirectory.Remove(0, 6);
-            AppDomain.CurrentDomain.SetData("DataDirectory", dataDirectory);
             
             Application.Run(new LoginForm(new AdminForm(), null, null));
             //Application.Run(new AdminForm());
