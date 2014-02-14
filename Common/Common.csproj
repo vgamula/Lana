@@ -65,17 +65,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddTaskForm.cs">
+    <Compile Include="AddTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTaskForm.Designer.cs">
+    <Compile Include="AddTestForm.Designer.cs">
+      <DependentUpon>AddTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CRUDs\AddTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CRUDs\AddTaskForm.Designer.cs">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageContest.cs">
+    <Compile Include="UI\ManageContestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageContest.Designer.cs">
-      <DependentUpon>ManageContest.cs</DependentUpon>
+    <Compile Include="UI\ManageContestForm.Designer.cs">
+      <DependentUpon>ManageContestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CRUDs\AddContestForm.cs">
       <SubType>Form</SubType>
@@ -179,11 +185,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddTaskForm.resx">
+    <EmbeddedResource Include="AddTestForm.resx">
+      <DependentUpon>AddTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CRUDs\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageContest.resx">
-      <DependentUpon>ManageContest.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ManageContestForm.resx">
+      <DependentUpon>ManageContestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CRUDs\AddContestForm.resx">
       <DependentUpon>AddContestForm.cs</DependentUpon>

@@ -20,5 +20,10 @@ namespace Common
         public string OutputData { get; set; }
     
         public virtual Task Task { get; set; }
+
+        public override string ToString()
+        {
+            return this.Id.ToString();
+        }
     }
 }
