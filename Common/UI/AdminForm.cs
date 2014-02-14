@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Common;
-
-namespace Server
+namespace Common
 {
     public partial class AdminForm : Form
     {
@@ -85,6 +83,11 @@ namespace Server
                 return;
             Contest contest = (Contest)listBoxContests.SelectedItem;
             (new ManageContest(contest)).ShowDialog();
+
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
 
         }
 

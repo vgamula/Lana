@@ -20,7 +20,7 @@ namespace Server
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new LoginForm(new AdminForm(), null, null));
+            Application.Run(new LoginForm());
             //Application.Run(new AdminForm());
         }
     }

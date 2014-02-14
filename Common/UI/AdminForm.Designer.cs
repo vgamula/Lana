@@ -1,4 +1,4 @@
-﻿namespace Server
+﻿namespace Common
 {
     partial class AdminForm
     {
@@ -118,6 +118,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "AdminForm";
             this.Text = "Manage system";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);

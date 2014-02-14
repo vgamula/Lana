@@ -12,16 +12,10 @@ namespace Common
 {
     public partial class LoginForm : Form
     {
-        private Form _adminForm;
-        private Form _competitorForm;
-        private Form _spectator;
 
-        public LoginForm(Form adminForm, Form competitorForm, Form spectator)
+        public LoginForm()
         {
             InitializeComponent();
-            this._adminForm = adminForm;
-            this._competitorForm = competitorForm;
-            this._spectator = spectator;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -74,10 +68,10 @@ namespace Common
                 switch (result.Access)
                 {
                     case 0: 
-                        form = this._adminForm;
+                        form = new AdminForm();
                         break;
                     case 1: 
-                        form = this._competitorForm;
+                        form = new ClientForm(result);
                         break;
                     default:
                         break;
