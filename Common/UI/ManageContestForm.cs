@@ -163,7 +163,9 @@ namespace Common
             using (var db = new DatabaseEntities())
             {
                 listBoxTests.Items.Clear();
-                foreach (var item in db.Tests.Where(t => t.TaskId == CurrentTask.Id).ToList())
+                var result = db.Tests.Where(t => t.TaskId == CurrentTask.Id);
+                if (result != null)
+                foreach (var item in result.ToList())
                 {
                     listBoxTests.Items.Add(item);
                 }

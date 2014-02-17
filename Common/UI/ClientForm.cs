@@ -40,7 +40,8 @@ namespace Common
                 return;
             }
 
-            ///
+            (new ClientContestForm(this._user, (Contest)listBoxContests.SelectedItem)).ShowDialog();
+            
 
 
         }

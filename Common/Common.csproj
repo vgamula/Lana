@@ -65,16 +65,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="MyTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTabPage.Designer.cs">
+      <DependentUpon>MyTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
+    <Compile Include="UI\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientForm.cs">
+    <Compile Include="UI\ClientContestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientForm.Designer.cs">
+    <Compile Include="UI\ClientContestForm.Designer.cs">
+      <DependentUpon>ClientContestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CRUDs\AddTestForm.cs">
@@ -197,10 +209,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AdminForm.resx">
+    <EmbeddedResource Include="MyTabPage.resx">
+      <DependentUpon>MyTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientForm.resx">
+    <EmbeddedResource Include="UI\ClientContestForm.resx">
+      <DependentUpon>ClientContestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CRUDs\AddTestForm.resx">
