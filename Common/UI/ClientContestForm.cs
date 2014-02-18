@@ -27,20 +27,25 @@ namespace Common
         {
             using (var db = new DatabaseEntities())
             {
+                char tabName = 'A';
                 foreach (var item in db.Tasks.Where(t => t.ContestId == this._contest.Id))
                 {
                     TabPage tabPage = new TabPage();
-                    MyTabPage page = new MyTabPage();
-                    page.labelTitle.Text = item.Title;
-                    page.labelDescription.Text = item.Description;
+                    MyTabPage page = new MyTabPage(user: this._user, task: item);
                     tabPage.Controls.Add(page);
-                    tabPage.Text = item.Title;
-                    tabControl1.TabPages.Add(tabPage);
+                    tabPage.Text = tabName.ToString();
+                    tabName++;
+                    tabControlTasks.TabPages.Add(tabPage);
                 }
             }
         }
 
         private void ClientContestForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControlTasks_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

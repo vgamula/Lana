@@ -99,6 +99,7 @@
             this.buttonTest.TabIndex = 6;
             this.buttonTest.Text = "buttonTest";
             this.buttonTest.UseVisualStyleBackColor = true;
+            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
             // 
             // MyTabPage
             // 
