@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Common
+using Common;
+
+namespace Client
 {
     public partial class LoginForm : Form
     {
@@ -71,7 +73,7 @@ namespace Common
                         form = new AdminForm();
                         break;
                     case 1: 
-                        form = null;//new ClientForm(result);
+                        form = new ClientForm(result);
                         break;
                     default:
                         break;

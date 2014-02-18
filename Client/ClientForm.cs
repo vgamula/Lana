@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Common;
 
-namespace Common
+namespace Client
 {
     public partial class ClientForm : Form
     {
@@ -43,6 +44,11 @@ namespace Common
             (new ClientContestForm(this._user, (Contest)listBoxContests.SelectedItem)).ShowDialog();
             
 
+
+        }
+
+        private void ClientForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

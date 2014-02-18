@@ -1,4 +1,4 @@
-﻿namespace Common
+﻿namespace Client
 {
     partial class MyTabPage
     {
@@ -33,14 +33,15 @@
             this.labelFile = new System.Windows.Forms.Label();
             this.buttonOpenFile = new System.Windows.Forms.Button();
             this.labelLanguage = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCompilers = new System.Windows.Forms.ComboBox();
             this.buttonTest = new System.Windows.Forms.Button();
+            this.labelMark = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(14, 13);
+            this.labelTitle.Location = new System.Drawing.Point(17, 13);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(49, 13);
             this.labelTitle.TabIndex = 0;
@@ -66,11 +67,11 @@
             // 
             // buttonOpenFile
             // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(17, 149);
+            this.buttonOpenFile.Location = new System.Drawing.Point(17, 160);
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(75, 23);
             this.buttonOpenFile.TabIndex = 3;
-            this.buttonOpenFile.Text = "button1";
+            this.buttonOpenFile.Text = "Open";
             this.buttonOpenFile.UseVisualStyleBackColor = true;
             this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
@@ -83,13 +84,13 @@
             this.labelLanguage.TabIndex = 4;
             this.labelLanguage.Text = "Select language";
             // 
-            // comboBox1
+            // comboBoxCompilers
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBoxCompilers.FormattingEnabled = true;
+            this.comboBoxCompilers.Location = new System.Drawing.Point(17, 94);
+            this.comboBoxCompilers.Name = "comboBoxCompilers";
+            this.comboBoxCompilers.Size = new System.Drawing.Size(120, 21);
+            this.comboBoxCompilers.TabIndex = 5;
             // 
             // buttonTest
             // 
@@ -97,16 +98,26 @@
             this.buttonTest.Name = "buttonTest";
             this.buttonTest.Size = new System.Drawing.Size(75, 23);
             this.buttonTest.TabIndex = 6;
-            this.buttonTest.Text = "buttonTest";
+            this.buttonTest.Text = "Test";
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
+            // 
+            // labelMark
+            // 
+            this.labelMark.AutoSize = true;
+            this.labelMark.Location = new System.Drawing.Point(17, 40);
+            this.labelMark.Name = "labelMark";
+            this.labelMark.Size = new System.Drawing.Size(53, 13);
+            this.labelMark.TabIndex = 7;
+            this.labelMark.Text = "labelMark";
             // 
             // MyTabPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelMark);
             this.Controls.Add(this.buttonTest);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCompilers);
             this.Controls.Add(this.labelLanguage);
             this.Controls.Add(this.buttonOpenFile);
             this.Controls.Add(this.labelFile);
@@ -114,6 +125,7 @@
             this.Controls.Add(this.labelTitle);
             this.Name = "MyTabPage";
             this.Size = new System.Drawing.Size(532, 383);
+            this.Load += new System.EventHandler(this.MyTabPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +138,8 @@
         private System.Windows.Forms.Label labelFile;
         private System.Windows.Forms.Button buttonOpenFile;
         private System.Windows.Forms.Label labelLanguage;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCompilers;
         private System.Windows.Forms.Button buttonTest;
+        private System.Windows.Forms.Label labelMark;
     }
 }

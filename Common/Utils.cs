@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -23,6 +24,50 @@ namespace Common
             }
             string password = s.ToString();
             return password;
+        }
+
+        public static bool MakeTests(String pathToProgramm, User user, Task task)
+        {
+            using (var db = new DatabaseEntities())
+            {
+                bool passed = true;
+                foreach (var item in db.Tests.Where(t => t.TaskId == task.Id).ToList())
+                {
+                    if (!PassTest(pathToProgramm, item)) 
+                    {
+                        passed = false;
+                        break;
+                    }
+                }
+                Result result = new Result()
+                    {
+                        PassingTime = DateTime.Now,
+                        TaskId = task.Id,
+                        UserId = user.Id,
+                        IsPassed = Convert.ToInt32(passed)
+                    };
+                db.Results.Add(result);
+                db.SaveChanges();
+                return passed;
+            }
+        }
+
+        public static bool PassTest(String pathToProgramm, Test test)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = pathToProgramm;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.CreateNoWindow = true;
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.Start();
+            StreamWriter sw = process.StandardInput;
+            StreamReader sr = process.StandardOutput;
+            sw.Write(test.InputData);
+            String result = sr.ReadToEnd().Trim();
+            sr.Close();
+            sw.Close();
+            return result == test.OutputData;
         }
 
         public static T Clone<T>(T source)

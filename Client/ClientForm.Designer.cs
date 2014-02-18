@@ -1,4 +1,4 @@
-﻿namespace Common
+﻿namespace Client
 {
     partial class ClientForm
     {
@@ -46,7 +46,7 @@
             this.listBoxContests.FormattingEnabled = true;
             this.listBoxContests.Location = new System.Drawing.Point(16, 30);
             this.listBoxContests.Name = "listBoxContests";
-            this.listBoxContests.Size = new System.Drawing.Size(120, 108);
+            this.listBoxContests.Size = new System.Drawing.Size(120, 160);
             this.listBoxContests.TabIndex = 1;
             this.listBoxContests.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxContests_MouseDoubleClick);
             // 
@@ -54,11 +54,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 202);
+            this.ClientSize = new System.Drawing.Size(171, 202);
             this.Controls.Add(this.listBoxContests);
             this.Controls.Add(this.label1);
             this.Name = "ClientForm";
             this.Text = "Client";
+            this.Load += new System.EventHandler(this.ClientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
