@@ -36,6 +36,7 @@
             this.comboBoxCompilers = new System.Windows.Forms.ComboBox();
             this.buttonTest = new System.Windows.Forms.Button();
             this.labelMark = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -67,7 +68,7 @@
             // 
             // buttonOpenFile
             // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(17, 160);
+            this.buttonOpenFile.Location = new System.Drawing.Point(17, 149);
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(75, 23);
             this.buttonOpenFile.TabIndex = 3;
@@ -94,7 +95,7 @@
             // 
             // buttonTest
             // 
-            this.buttonTest.Location = new System.Drawing.Point(17, 200);
+            this.buttonTest.Location = new System.Drawing.Point(17, 178);
             this.buttonTest.Name = "buttonTest";
             this.buttonTest.Size = new System.Drawing.Size(75, 23);
             this.buttonTest.TabIndex = 6;
@@ -111,10 +112,20 @@
             this.labelMark.TabIndex = 7;
             this.labelMark.Text = "labelMark";
             // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Location = new System.Drawing.Point(17, 216);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(52, 13);
+            this.labelTime.TabIndex = 8;
+            this.labelTime.Text = "labelTime";
+            // 
             // MyTabPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelTime);
             this.Controls.Add(this.labelMark);
             this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.comboBoxCompilers);
@@ -141,5 +152,6 @@
         private System.Windows.Forms.ComboBox comboBoxCompilers;
         private System.Windows.Forms.Button buttonTest;
         private System.Windows.Forms.Label labelMark;
+        public System.Windows.Forms.Label labelTime;
     }
 }

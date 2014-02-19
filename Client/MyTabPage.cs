@@ -77,11 +77,6 @@ namespace Client
                     if (passed)
                     {
                         MessageBox.Show("Tests are passed!");
-                        TabPage tp = this.Parent as TabPage;
-                        if (tp.InvokeRequired)
-                        {
-                            tp.Text = String.Format("{0} - Passed", tp.Text);  
-                        }
                     }
                     else
                     {
@@ -93,6 +88,8 @@ namespace Client
                 MessageBox.Show("Compiling error!");
             }
         }
+
+
 
         private void MyTabPage_Load(object sender, EventArgs e)
         {

@@ -35,7 +35,9 @@ namespace Client
                     TabPage tabPage = new TabPage();
                     MyTabPage page = new MyTabPage(user: this._user, task: item);
                     tabPage.Controls.Add(page);
-                    tabPage.Text = tabName.ToString();
+                    var res = db.Results.FirstOrDefault(t=>t.TaskId == item.Id);
+                    page.labelTime.Text = (res.IsPassed == 1 ? res.PassingTime.ToString() : String.Empty);
+                    tabPage.Text = tabName.ToString() + (res != null ? (res.IsPassed==1 ? ": PASSED":String.Empty):String.Empty);
                     tabName++;
                     tabControlTasks.TabPages.Add(tabPage);
                 }
