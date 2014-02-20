@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(10, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
@@ -47,16 +47,16 @@
             // listBoxUsers
             // 
             this.listBoxUsers.FormattingEnabled = true;
-            this.listBoxUsers.Location = new System.Drawing.Point(16, 30);
+            this.listBoxUsers.Location = new System.Drawing.Point(13, 30);
             this.listBoxUsers.Name = "listBoxUsers";
-            this.listBoxUsers.Size = new System.Drawing.Size(147, 134);
+            this.listBoxUsers.Size = new System.Drawing.Size(224, 134);
             this.listBoxUsers.TabIndex = 1;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(16, 171);
+            this.buttonAdd.Location = new System.Drawing.Point(13, 171);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(147, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(224, 23);
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -64,9 +64,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(16, 200);
+            this.buttonEdit.Location = new System.Drawing.Point(13, 200);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(147, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(224, 23);
             this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(16, 229);
+            this.buttonRemove.Location = new System.Drawing.Point(13, 229);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(147, 23);
+            this.buttonRemove.Size = new System.Drawing.Size(224, 23);
             this.buttonRemove.TabIndex = 2;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 309);
+            this.ClientSize = new System.Drawing.Size(248, 260);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);

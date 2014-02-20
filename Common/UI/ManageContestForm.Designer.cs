@@ -44,18 +44,19 @@
             this.buttonAddTask = new System.Windows.Forms.Button();
             this.listBoxTasks = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBoxUsersInCompetition = new System.Windows.Forms.ListBox();
-            this.listBoxUsers = new System.Windows.Forms.ListBox();
-            this.buttonRemoveUser = new System.Windows.Forms.Button();
-            this.buttonAddUser = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonAddUser = new System.Windows.Forms.Button();
+            this.buttonRemoveUser = new System.Windows.Forms.Button();
+            this.listBoxUsers = new System.Windows.Forms.ListBox();
+            this.listBoxUsersInCompetition = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labelStartTime = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.labelEndTime = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxTasks.SuspendLayout();
             this.groupBoxTests.SuspendLayout();
             this.panelTests.SuspendLayout();
@@ -229,31 +230,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Users";
             // 
-            // listBoxUsersInCompetition
+            // label4
             // 
-            this.listBoxUsersInCompetition.FormattingEnabled = true;
-            this.listBoxUsersInCompetition.Location = new System.Drawing.Point(6, 33);
-            this.listBoxUsersInCompetition.Name = "listBoxUsersInCompetition";
-            this.listBoxUsersInCompetition.Size = new System.Drawing.Size(153, 121);
-            this.listBoxUsersInCompetition.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Сontestants:";
             // 
-            // listBoxUsers
+            // label3
             // 
-            this.listBoxUsers.FormattingEnabled = true;
-            this.listBoxUsers.Location = new System.Drawing.Point(171, 33);
-            this.listBoxUsers.Name = "listBoxUsers";
-            this.listBoxUsers.Size = new System.Drawing.Size(157, 121);
-            this.listBoxUsers.TabIndex = 1;
-            // 
-            // buttonRemoveUser
-            // 
-            this.buttonRemoveUser.Location = new System.Drawing.Point(7, 161);
-            this.buttonRemoveUser.Name = "buttonRemoveUser";
-            this.buttonRemoveUser.Size = new System.Drawing.Size(152, 23);
-            this.buttonRemoveUser.TabIndex = 2;
-            this.buttonRemoveUser.Text = ">>";
-            this.buttonRemoveUser.UseVisualStyleBackColor = true;
-            this.buttonRemoveUser.Click += new System.EventHandler(this.buttonRemoveUser_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(168, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "All users:";
             // 
             // buttonAddUser
             // 
@@ -265,28 +258,36 @@
             this.buttonAddUser.UseVisualStyleBackColor = true;
             this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
-            // label3
+            // buttonRemoveUser
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(168, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "All users:";
+            this.buttonRemoveUser.Location = new System.Drawing.Point(7, 161);
+            this.buttonRemoveUser.Name = "buttonRemoveUser";
+            this.buttonRemoveUser.Size = new System.Drawing.Size(152, 23);
+            this.buttonRemoveUser.TabIndex = 2;
+            this.buttonRemoveUser.Text = ">>";
+            this.buttonRemoveUser.UseVisualStyleBackColor = true;
+            this.buttonRemoveUser.Click += new System.EventHandler(this.buttonRemoveUser_Click);
             // 
-            // label4
+            // listBoxUsers
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Сontestants:";
+            this.listBoxUsers.FormattingEnabled = true;
+            this.listBoxUsers.Location = new System.Drawing.Point(171, 33);
+            this.listBoxUsers.Name = "listBoxUsers";
+            this.listBoxUsers.Size = new System.Drawing.Size(157, 121);
+            this.listBoxUsers.TabIndex = 1;
+            // 
+            // listBoxUsersInCompetition
+            // 
+            this.listBoxUsersInCompetition.FormattingEnabled = true;
+            this.listBoxUsersInCompetition.Location = new System.Drawing.Point(6, 33);
+            this.listBoxUsersInCompetition.Name = "listBoxUsersInCompetition";
+            this.listBoxUsersInCompetition.Size = new System.Drawing.Size(153, 121);
+            this.listBoxUsersInCompetition.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(354, 374);
+            this.label5.Location = new System.Drawing.Point(355, 339);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 2;
@@ -295,7 +296,7 @@
             // labelStartTime
             // 
             this.labelStartTime.AutoSize = true;
-            this.labelStartTime.Location = new System.Drawing.Point(354, 391);
+            this.labelStartTime.Location = new System.Drawing.Point(355, 356);
             this.labelStartTime.Name = "labelStartTime";
             this.labelStartTime.Size = new System.Drawing.Size(49, 13);
             this.labelStartTime.TabIndex = 3;
@@ -304,7 +305,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(353, 430);
+            this.label8.Location = new System.Drawing.Point(354, 395);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 2;
@@ -313,7 +314,7 @@
             // labelEndTime
             // 
             this.labelEndTime.AutoSize = true;
-            this.labelEndTime.Location = new System.Drawing.Point(353, 447);
+            this.labelEndTime.Location = new System.Drawing.Point(354, 412);
             this.labelEndTime.Name = "labelEndTime";
             this.labelEndTime.Size = new System.Drawing.Size(49, 13);
             this.labelEndTime.TabIndex = 3;
@@ -336,11 +337,22 @@
             this.labelTitle.TabIndex = 5;
             this.labelTitle.Text = "______";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(353, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Results";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ManageContest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 487);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labelEndTime);
@@ -395,5 +407,6 @@
         private System.Windows.Forms.Label labelEndTime;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Button button1;
     }
 }

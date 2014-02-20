@@ -24,6 +24,7 @@ namespace Client
             this._user = user;
             this._task = task;
             ShowInformation(this._task);
+            //compilers
             var compilersList = Assembly.
                 GetExecutingAssembly().
                 GetTypes().

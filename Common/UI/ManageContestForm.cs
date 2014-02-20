@@ -219,5 +219,10 @@ namespace Common
             ShowUsers();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (new ResultsForm(this._contest)).ShowDialog();
+        }
+
     }
 }

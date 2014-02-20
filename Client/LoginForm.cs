@@ -89,7 +89,9 @@ namespace Client
 
         private void guestButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            (new SelectContestToResultForm()).ShowDialog();
+            this.Show();
         }
     }
 }

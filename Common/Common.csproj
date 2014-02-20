@@ -72,6 +72,12 @@
     <Compile Include="ResultsForm.Designer.cs">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectContestToResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectContestToResultForm.Designer.cs">
+      <DependentUpon>SelectContestToResultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ResultsForm.resx">
       <DependentUpon>ResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectContestToResultForm.resx">
+      <DependentUpon>SelectContestToResultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>

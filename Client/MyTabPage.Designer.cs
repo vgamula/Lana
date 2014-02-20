@@ -51,7 +51,7 @@
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(286, 13);
+            this.labelDescription.Location = new System.Drawing.Point(221, 13);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(82, 13);
             this.labelDescription.TabIndex = 1;
@@ -135,7 +135,7 @@
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelTitle);
             this.Name = "MyTabPage";
-            this.Size = new System.Drawing.Size(532, 383);
+            this.Size = new System.Drawing.Size(416, 242);
             this.Load += new System.EventHandler(this.MyTabPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
