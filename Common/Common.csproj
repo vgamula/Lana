@@ -66,16 +66,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AtomResult.cs" />
-    <Compile Include="ResultsForm.cs">
+    <Compile Include="LanguageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResultsForm.Designer.cs">
+    <Compile Include="LanguageForm.Designer.cs">
+      <DependentUpon>LanguageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResultsForm.Designer.cs">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectContestToResultForm.cs">
+    <Compile Include="UI\SelectContestToResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectContestToResultForm.Designer.cs">
+    <Compile Include="UI\SelectContestToResultForm.Designer.cs">
       <DependentUpon>SelectContestToResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\AdminForm.cs">
@@ -204,13 +210,22 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ResultsForm.resx">
+    <EmbeddedResource Include="LanguageForm.resx">
+      <DependentUpon>LanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResultsForm.resx">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectContestToResultForm.resx">
+    <EmbeddedResource Include="UI\SelectContestToResultForm.resx">
+      <DependentUpon>SelectContestToResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SelectContestToResultForm.uk.resx">
       <DependentUpon>SelectContestToResultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminForm.uk.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CRUDs\AddTestForm.resx">
@@ -218,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CRUDs\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.uk.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ManageContestForm.resx">
       <DependentUpon>ManageContestForm.cs</DependentUpon>
@@ -231,7 +249,13 @@
     <EmbeddedResource Include="UI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageContestForm.uk.resx">
+      <DependentUpon>ManageContestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ManageUsersForm.resx">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageUsersForm.uk.resx">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

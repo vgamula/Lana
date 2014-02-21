@@ -38,6 +38,8 @@ namespace Client
                     var res = db.Results.FirstOrDefault(t=>t.TaskId == item.Id);
                     if (res != null)
                         page.labelTime.Text = (res.IsPassed == 1 ? res.PassingTime.ToString() : String.Empty);
+                    else
+                        page.labelTime.Text = String.Empty;
                     tabPage.Text = tabName.ToString() + (res != null ? (res.IsPassed==1 ? ": PASSED":String.Empty):String.Empty);
                     tabName++;
                     tabControlTasks.TabPages.Add(tabPage);

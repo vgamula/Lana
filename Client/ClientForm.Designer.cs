@@ -28,46 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientForm));
+            this.labelText = new System.Windows.Forms.Label();
             this.listBoxContests = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // label1
+            // labelText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Available contests:";
+            resources.ApplyResources(this.labelText, "labelText");
+            this.labelText.Name = "labelText";
             // 
             // listBoxContests
             // 
+            resources.ApplyResources(this.listBoxContests, "listBoxContests");
             this.listBoxContests.FormattingEnabled = true;
-            this.listBoxContests.Location = new System.Drawing.Point(16, 30);
             this.listBoxContests.Name = "listBoxContests";
-            this.listBoxContests.Size = new System.Drawing.Size(120, 160);
-            this.listBoxContests.TabIndex = 1;
             this.listBoxContests.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxContests_MouseDoubleClick);
             // 
             // ClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(171, 202);
             this.Controls.Add(this.listBoxContests);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelText);
             this.Name = "ClientForm";
-            this.Text = "Client";
             this.Load += new System.EventHandler(this.ClientForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelText;
         private System.Windows.Forms.ListBox listBoxContests;
     }
 }

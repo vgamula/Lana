@@ -79,16 +79,40 @@
     <Compile Include="PascalCompiler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientContestForm.en.resx">
+      <DependentUpon>ClientContestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientContestForm.resx">
       <DependentUpon>ClientContestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientContestForm.uk.resx">
+      <DependentUpon>ClientContestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.en.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.uk.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.en.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.uk.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyTabPage.en.resx">
+      <DependentUpon>MyTabPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyTabPage.resx">
+      <DependentUpon>MyTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyTabPage.uk.resx">
       <DependentUpon>MyTabPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

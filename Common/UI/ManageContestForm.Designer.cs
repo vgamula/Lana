@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageContest));
             this.groupBoxTasks = new System.Windows.Forms.GroupBox();
             this.groupBoxTests = new System.Windows.Forms.GroupBox();
             this.panelTests = new System.Windows.Forms.Panel();
@@ -65,30 +66,25 @@
             // 
             // groupBoxTasks
             // 
+            resources.ApplyResources(this.groupBoxTasks, "groupBoxTasks");
             this.groupBoxTasks.Controls.Add(this.groupBoxTests);
             this.groupBoxTasks.Controls.Add(this.buttonRemoveTask);
             this.groupBoxTasks.Controls.Add(this.buttonEditTask);
             this.groupBoxTasks.Controls.Add(this.buttonAddTask);
             this.groupBoxTasks.Controls.Add(this.listBoxTasks);
-            this.groupBoxTasks.Location = new System.Drawing.Point(13, 13);
             this.groupBoxTasks.Name = "groupBoxTasks";
-            this.groupBoxTasks.Size = new System.Drawing.Size(538, 267);
-            this.groupBoxTasks.TabIndex = 0;
             this.groupBoxTasks.TabStop = false;
-            this.groupBoxTasks.Text = "Tasks:";
             // 
             // groupBoxTests
             // 
+            resources.ApplyResources(this.groupBoxTests, "groupBoxTests");
             this.groupBoxTests.Controls.Add(this.panelTests);
-            this.groupBoxTests.Location = new System.Drawing.Point(165, 8);
             this.groupBoxTests.Name = "groupBoxTests";
-            this.groupBoxTests.Size = new System.Drawing.Size(367, 251);
-            this.groupBoxTests.TabIndex = 7;
             this.groupBoxTests.TabStop = false;
-            this.groupBoxTests.Text = "Tests:";
             // 
             // panelTests
             // 
+            resources.ApplyResources(this.panelTests, "panelTests");
             this.panelTests.Controls.Add(this.richTextBoxOutputData);
             this.panelTests.Controls.Add(this.label2);
             this.panelTests.Controls.Add(this.richTextBoxInputData);
@@ -97,261 +93,173 @@
             this.panelTests.Controls.Add(this.buttonEditTest);
             this.panelTests.Controls.Add(this.buttonAddTest);
             this.panelTests.Controls.Add(this.listBoxTests);
-            this.panelTests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTests.Location = new System.Drawing.Point(3, 16);
             this.panelTests.Name = "panelTests";
-            this.panelTests.Size = new System.Drawing.Size(361, 232);
-            this.panelTests.TabIndex = 0;
             // 
             // richTextBoxOutputData
             // 
-            this.richTextBoxOutputData.Location = new System.Drawing.Point(249, 106);
+            resources.ApplyResources(this.richTextBoxOutputData, "richTextBoxOutputData");
             this.richTextBoxOutputData.Name = "richTextBoxOutputData";
-            this.richTextBoxOutputData.Size = new System.Drawing.Size(100, 96);
-            this.richTextBoxOutputData.TabIndex = 14;
-            this.richTextBoxOutputData.Text = "";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(173, 106);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Output data:";
             // 
             // richTextBoxInputData
             // 
-            this.richTextBoxInputData.Location = new System.Drawing.Point(249, 4);
+            resources.ApplyResources(this.richTextBoxInputData, "richTextBoxInputData");
             this.richTextBoxInputData.Name = "richTextBoxInputData";
-            this.richTextBoxInputData.Size = new System.Drawing.Size(100, 96);
-            this.richTextBoxInputData.TabIndex = 14;
-            this.richTextBoxInputData.Text = "";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(173, 4);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Input data:";
             // 
             // buttonRemoveTest
             // 
-            this.buttonRemoveTest.Location = new System.Drawing.Point(3, 202);
+            resources.ApplyResources(this.buttonRemoveTest, "buttonRemoveTest");
             this.buttonRemoveTest.Name = "buttonRemoveTest";
-            this.buttonRemoveTest.Size = new System.Drawing.Size(163, 23);
-            this.buttonRemoveTest.TabIndex = 12;
-            this.buttonRemoveTest.Text = "Remove test";
             this.buttonRemoveTest.UseVisualStyleBackColor = true;
             this.buttonRemoveTest.Click += new System.EventHandler(this.buttonRemoveTest_Click);
             // 
             // buttonEditTest
             // 
-            this.buttonEditTest.Location = new System.Drawing.Point(3, 173);
+            resources.ApplyResources(this.buttonEditTest, "buttonEditTest");
             this.buttonEditTest.Name = "buttonEditTest";
-            this.buttonEditTest.Size = new System.Drawing.Size(163, 23);
-            this.buttonEditTest.TabIndex = 11;
-            this.buttonEditTest.Text = "Edit test";
             this.buttonEditTest.UseVisualStyleBackColor = true;
             this.buttonEditTest.Click += new System.EventHandler(this.buttonEditTest_Click);
             // 
             // buttonAddTest
             // 
-            this.buttonAddTest.Location = new System.Drawing.Point(3, 144);
+            resources.ApplyResources(this.buttonAddTest, "buttonAddTest");
             this.buttonAddTest.Name = "buttonAddTest";
-            this.buttonAddTest.Size = new System.Drawing.Size(163, 23);
-            this.buttonAddTest.TabIndex = 10;
-            this.buttonAddTest.Text = "Add test";
             this.buttonAddTest.UseVisualStyleBackColor = true;
             this.buttonAddTest.Click += new System.EventHandler(this.buttonAddTest_Click);
             // 
             // listBoxTests
             // 
+            resources.ApplyResources(this.listBoxTests, "listBoxTests");
             this.listBoxTests.FormattingEnabled = true;
-            this.listBoxTests.Location = new System.Drawing.Point(3, 3);
             this.listBoxTests.Name = "listBoxTests";
-            this.listBoxTests.Size = new System.Drawing.Size(163, 134);
-            this.listBoxTests.TabIndex = 9;
             this.listBoxTests.SelectedIndexChanged += new System.EventHandler(this.listBoxTests_SelectedIndexChanged);
             // 
             // buttonRemoveTask
             // 
-            this.buttonRemoveTask.Location = new System.Drawing.Point(6, 226);
+            resources.ApplyResources(this.buttonRemoveTask, "buttonRemoveTask");
             this.buttonRemoveTask.Name = "buttonRemoveTask";
-            this.buttonRemoveTask.Size = new System.Drawing.Size(153, 23);
-            this.buttonRemoveTask.TabIndex = 4;
-            this.buttonRemoveTask.Text = "Remove";
             this.buttonRemoveTask.UseVisualStyleBackColor = true;
             this.buttonRemoveTask.Click += new System.EventHandler(this.buttonRemoveTask_Click);
             // 
             // buttonEditTask
             // 
-            this.buttonEditTask.Location = new System.Drawing.Point(6, 197);
+            resources.ApplyResources(this.buttonEditTask, "buttonEditTask");
             this.buttonEditTask.Name = "buttonEditTask";
-            this.buttonEditTask.Size = new System.Drawing.Size(153, 23);
-            this.buttonEditTask.TabIndex = 3;
-            this.buttonEditTask.Text = "Edit";
             this.buttonEditTask.UseVisualStyleBackColor = true;
             this.buttonEditTask.Click += new System.EventHandler(this.buttonEditTask_Click);
             // 
             // buttonAddTask
             // 
-            this.buttonAddTask.Location = new System.Drawing.Point(6, 168);
+            resources.ApplyResources(this.buttonAddTask, "buttonAddTask");
             this.buttonAddTask.Name = "buttonAddTask";
-            this.buttonAddTask.Size = new System.Drawing.Size(153, 23);
-            this.buttonAddTask.TabIndex = 2;
-            this.buttonAddTask.Text = "Add";
             this.buttonAddTask.UseVisualStyleBackColor = true;
             this.buttonAddTask.Click += new System.EventHandler(this.buttonAddTask_Click);
             // 
             // listBoxTasks
             // 
+            resources.ApplyResources(this.listBoxTasks, "listBoxTasks");
             this.listBoxTasks.FormattingEnabled = true;
-            this.listBoxTasks.Location = new System.Drawing.Point(6, 14);
             this.listBoxTasks.Name = "listBoxTasks";
-            this.listBoxTasks.Size = new System.Drawing.Size(153, 147);
-            this.listBoxTasks.TabIndex = 1;
             this.listBoxTasks.SelectedIndexChanged += new System.EventHandler(this.listBoxTasks_SelectedIndexChanged);
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.buttonAddUser);
             this.groupBox1.Controls.Add(this.buttonRemoveUser);
             this.groupBox1.Controls.Add(this.listBoxUsers);
             this.groupBox1.Controls.Add(this.listBoxUsersInCompetition);
-            this.groupBox1.Location = new System.Drawing.Point(13, 286);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(334, 189);
-            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Users";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 16);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Сontestants:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(168, 16);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "All users:";
             // 
             // buttonAddUser
             // 
-            this.buttonAddUser.Location = new System.Drawing.Point(171, 161);
+            resources.ApplyResources(this.buttonAddUser, "buttonAddUser");
             this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(157, 23);
-            this.buttonAddUser.TabIndex = 3;
-            this.buttonAddUser.Text = "<<";
             this.buttonAddUser.UseVisualStyleBackColor = true;
             this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
             // buttonRemoveUser
             // 
-            this.buttonRemoveUser.Location = new System.Drawing.Point(7, 161);
+            resources.ApplyResources(this.buttonRemoveUser, "buttonRemoveUser");
             this.buttonRemoveUser.Name = "buttonRemoveUser";
-            this.buttonRemoveUser.Size = new System.Drawing.Size(152, 23);
-            this.buttonRemoveUser.TabIndex = 2;
-            this.buttonRemoveUser.Text = ">>";
             this.buttonRemoveUser.UseVisualStyleBackColor = true;
             this.buttonRemoveUser.Click += new System.EventHandler(this.buttonRemoveUser_Click);
             // 
             // listBoxUsers
             // 
+            resources.ApplyResources(this.listBoxUsers, "listBoxUsers");
             this.listBoxUsers.FormattingEnabled = true;
-            this.listBoxUsers.Location = new System.Drawing.Point(171, 33);
             this.listBoxUsers.Name = "listBoxUsers";
-            this.listBoxUsers.Size = new System.Drawing.Size(157, 121);
-            this.listBoxUsers.TabIndex = 1;
             // 
             // listBoxUsersInCompetition
             // 
+            resources.ApplyResources(this.listBoxUsersInCompetition, "listBoxUsersInCompetition");
             this.listBoxUsersInCompetition.FormattingEnabled = true;
-            this.listBoxUsersInCompetition.Location = new System.Drawing.Point(6, 33);
             this.listBoxUsersInCompetition.Name = "listBoxUsersInCompetition";
-            this.listBoxUsersInCompetition.Size = new System.Drawing.Size(153, 121);
-            this.listBoxUsersInCompetition.TabIndex = 0;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(355, 339);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Start time:";
             // 
             // labelStartTime
             // 
-            this.labelStartTime.AutoSize = true;
-            this.labelStartTime.Location = new System.Drawing.Point(355, 356);
+            resources.ApplyResources(this.labelStartTime, "labelStartTime");
             this.labelStartTime.Name = "labelStartTime";
-            this.labelStartTime.Size = new System.Drawing.Size(49, 13);
-            this.labelStartTime.TabIndex = 3;
-            this.labelStartTime.Text = "_______";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(354, 395);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "End time:";
             // 
             // labelEndTime
             // 
-            this.labelEndTime.AutoSize = true;
-            this.labelEndTime.Location = new System.Drawing.Point(354, 412);
+            resources.ApplyResources(this.labelEndTime, "labelEndTime");
             this.labelEndTime.Name = "labelEndTime";
-            this.labelEndTime.Size = new System.Drawing.Size(49, 13);
-            this.labelEndTime.TabIndex = 3;
-            this.labelEndTime.Text = "_______";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(354, 302);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Title:";
             // 
             // labelTitle
             // 
-            this.labelTitle.Location = new System.Drawing.Point(357, 319);
+            resources.ApplyResources(this.labelTitle, "labelTitle");
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(100, 22);
-            this.labelTitle.TabIndex = 5;
-            this.labelTitle.Text = "______";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(353, 447);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Results";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ManageContest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 487);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.label6);
@@ -364,7 +272,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ManageContest";
-            this.Text = "Manage contest";
             this.Load += new System.EventHandler(this.ManageContest_Load);
             this.groupBoxTasks.ResumeLayout(false);
             this.groupBoxTests.ResumeLayout(false);

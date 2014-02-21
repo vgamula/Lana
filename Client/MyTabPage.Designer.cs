@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyTabPage));
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelFile = new System.Windows.Forms.Label();
@@ -41,89 +42,57 @@
             // 
             // labelTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(17, 13);
+            resources.ApplyResources(this.labelTitle, "labelTitle");
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(49, 13);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "labelTitle";
             // 
             // labelDescription
             // 
-            this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(221, 13);
+            resources.ApplyResources(this.labelDescription, "labelDescription");
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(82, 13);
-            this.labelDescription.TabIndex = 1;
-            this.labelDescription.Text = "labelDescription";
             // 
             // labelFile
             // 
-            this.labelFile.AutoSize = true;
-            this.labelFile.Location = new System.Drawing.Point(14, 133);
+            resources.ApplyResources(this.labelFile, "labelFile");
             this.labelFile.Name = "labelFile";
-            this.labelFile.Size = new System.Drawing.Size(45, 13);
-            this.labelFile.TabIndex = 2;
-            this.labelFile.Text = "labelFile";
             // 
             // buttonOpenFile
             // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(17, 149);
+            resources.ApplyResources(this.buttonOpenFile, "buttonOpenFile");
             this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(75, 23);
-            this.buttonOpenFile.TabIndex = 3;
-            this.buttonOpenFile.Text = "Open";
             this.buttonOpenFile.UseVisualStyleBackColor = true;
             this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
             // labelLanguage
             // 
-            this.labelLanguage.AutoSize = true;
-            this.labelLanguage.Location = new System.Drawing.Point(14, 77);
+            resources.ApplyResources(this.labelLanguage, "labelLanguage");
             this.labelLanguage.Name = "labelLanguage";
-            this.labelLanguage.Size = new System.Drawing.Size(84, 13);
-            this.labelLanguage.TabIndex = 4;
-            this.labelLanguage.Text = "Select language";
             // 
             // comboBoxCompilers
             // 
+            resources.ApplyResources(this.comboBoxCompilers, "comboBoxCompilers");
             this.comboBoxCompilers.FormattingEnabled = true;
-            this.comboBoxCompilers.Location = new System.Drawing.Point(17, 94);
             this.comboBoxCompilers.Name = "comboBoxCompilers";
-            this.comboBoxCompilers.Size = new System.Drawing.Size(120, 21);
-            this.comboBoxCompilers.TabIndex = 5;
             // 
             // buttonTest
             // 
-            this.buttonTest.Location = new System.Drawing.Point(17, 178);
+            resources.ApplyResources(this.buttonTest, "buttonTest");
             this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(75, 23);
-            this.buttonTest.TabIndex = 6;
-            this.buttonTest.Text = "Test";
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
             // 
             // labelMark
             // 
-            this.labelMark.AutoSize = true;
-            this.labelMark.Location = new System.Drawing.Point(17, 40);
+            resources.ApplyResources(this.labelMark, "labelMark");
             this.labelMark.Name = "labelMark";
-            this.labelMark.Size = new System.Drawing.Size(53, 13);
-            this.labelMark.TabIndex = 7;
-            this.labelMark.Text = "labelMark";
             // 
             // labelTime
             // 
-            this.labelTime.AutoSize = true;
-            this.labelTime.Location = new System.Drawing.Point(17, 216);
+            resources.ApplyResources(this.labelTime, "labelTime");
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(52, 13);
-            this.labelTime.TabIndex = 8;
-            this.labelTime.Text = "labelTime";
             // 
             // MyTabPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.labelMark);
@@ -135,7 +104,6 @@
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelTitle);
             this.Name = "MyTabPage";
-            this.Size = new System.Drawing.Size(416, 242);
             this.Load += new System.EventHandler(this.MyTabPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

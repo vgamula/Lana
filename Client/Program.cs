@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using Common;
 
 namespace Client
 {
@@ -16,7 +19,8 @@ namespace Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("uk-UA");
+            Application.Run(new LanguageForm(typeof(Client.LoginForm)));
         }
     }
 }
