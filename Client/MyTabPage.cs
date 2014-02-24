@@ -59,7 +59,7 @@ namespace Client
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
-            BaseCompiler compiler = CompilersFactory.GetCompiler("Pascal");
+            BaseCompiler compiler = CompilersFactory.GetCompiler(comboBoxCompilers.Text);
             String destination = String.Format("../../Files/{0}/{1}/{2}/", this._task.ContestId.ToString(), this._user.Id, this._task.Id);
 
             if (!Directory.Exists(destination))
