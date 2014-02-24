@@ -214,6 +214,18 @@
     <EmbeddedResource Include="LanguageForm.resx">
       <DependentUpon>LanguageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CRUDs\AddContestForm.uk.resx">
+      <DependentUpon>AddContestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CRUDs\AddTaskForm.uk.resx">
+      <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CRUDs\AddTestForm.uk.resx">
+      <DependentUpon>AddTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CRUDs\AddUserForm.uk.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ResultsForm.resx">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </EmbeddedResource>
